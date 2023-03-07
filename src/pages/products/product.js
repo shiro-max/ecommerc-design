@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 const Product = ({product}) => {
-    console.log(product)
     return (
         <Link  href={`/products/${product?.id}`} className="cursor-pointer">
             <div style={{position:"relative", width:"200px", height:"200px"}}>
