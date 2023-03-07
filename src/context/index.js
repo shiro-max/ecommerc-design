@@ -1,5 +1,5 @@
 
-import React,{createContext} from 'react';
+import React, { createContext } from 'react';
 import { useEffect, useState } from 'react';
 export const AppContext = createContext();
 
@@ -8,7 +8,7 @@ export const AppProvider = (props) => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-     
+
         const query = `
         {
             categories {
@@ -50,7 +50,7 @@ export const AppProvider = (props) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{categories,setCategories}}>
+        <AppContext.Provider value={{ categories, setCategories }}>
             {props.children}
         </AppContext.Provider>
     )
